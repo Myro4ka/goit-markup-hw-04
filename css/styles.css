@@ -21,6 +21,7 @@ html {
   --primary-white-color: #fff;
   --second-bg-color: #f5f4fa;
   --accent-bg-color: #2f303a;
+  --color-icon: #afb1b8;
 }
 
 body {
@@ -121,14 +122,30 @@ img {
 }
 .header-contacts {
   display: flex;
+  align-items: center;
   margin-left: auto;
+  gap: 30px;
 }
-.header-contacts li:not(:last-child) {
-  margin-right: 50px;
-}
-.header-contacts a {
+/* .header-contacts li:not(:last-child) {
+  margin-right: 30px;
+} */
+.header-contacts .mail,
+.header-contacts .tel {
+  display: flex;
   color: var(--second-text-color);
 }
+.mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--second-text-color);
+}
+/* .icon::before {
+  width: 16px;
+  height: 12px;
+  content: "";
+  background-color: rebeccapurple;
+} */
 .header-contacts a:hover,
 .header-contacts a:focus {
   color: var(--accent-color);
@@ -139,6 +156,19 @@ img {
   padding-bottom: 200px;
   background-color: var(--accent-bg-color);
   text-align: center;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bghero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hero-title {
   margin: 0 auto 30px;
@@ -192,6 +222,21 @@ img {
 .features-list li:not(:last-child) {
   margin-right: 30px;
 }
+.features-icon {
+  width: 270px;
+  height: 120px;
+  padding: 0;
+  margin: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-bg-color);
+  border-radius: 4px;
+}
+.icon {
+  width: 70px;
+  height: 70px;
+}
 .features-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -221,8 +266,7 @@ img {
 /* .services-list li:not(:last-child) {
   margin-right: 30px;
 } */
-.services-title,
-.team-title {
+.title {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 36px;
@@ -255,6 +299,33 @@ img {
 .team-card > img {
   margin-bottom: 30px;
 }
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-icon);
+}
+.social-link:hover {
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-icon {
+  fill: var(--primary-white-color);
+}
 .team-member {
   margin: 0 auto 10px;
   font-weight: 500;
@@ -262,10 +333,39 @@ img {
   text-align: center;
 }
 .team-desc {
-  margin: 0 auto;
+  margin: 0 auto 16px;
   color: var(--second-text-color);
   font-size: 16px;
   text-align: center;
+}
+
+/* cliets */
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-icon);
+  border-radius: 4px;
+}
+.clients-item:hover {
+  border: 1px solid var(--accent-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--color-icon);
+}
+.clients-item:hover .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* footer */
@@ -283,26 +383,48 @@ img {
 .footer .logo:focus {
   color: var(--accent-color);
 }
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
 address {
   width: 231px;
-  margin: 0;
+  margin: 0 70px 0 0;
   font-style: normal;
 }
-.footer-contacts li:not(:last-child) {
+.contacts-list li:not(:last-child) {
   margin-bottom: 9px;
 }
-
-.footer-contacts .location {
+.contacts-list .location {
   color: var(--primary-white-color);
   line-height: 1.5;
 }
-.footer-contacts .link {
+.contacts-list .link {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
 }
-.footer-contacts a:hover,
-.footer-contacts a:focus {
+.contacts-list a:hover,
+.contacts-list a:focus {
   color: var(--accent-color);
+}
+.social-box {
+  width: 206px;
+  padding: 0;
+  margin: 0s;
+}
+.social-box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.social-box a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-box .social-icon {
+  fill: var(--primary-white-color);
 }
 
 /* ----Стилі для potfolio.html---- */
