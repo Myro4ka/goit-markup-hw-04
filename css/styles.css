@@ -81,6 +81,7 @@ img {
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .modal {
@@ -381,10 +382,12 @@ img {
   height: 20px;
   fill: var(--color-icon);
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
-.social-link:hover .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: var(--primary-white-color);
 }
 .team-member {
@@ -417,7 +420,8 @@ img {
   border: 1px solid var(--color-icon);
   border-radius: 4px;
 }
-.clients-item:hover {
+.clients-item:hover,
+.clients-item:focus {
   border: 1px solid var(--accent-color);
 }
 .clients-icon {
@@ -425,7 +429,8 @@ img {
   height: 60px;
   fill: var(--color-icon);
 }
-.clients-item:hover .clients-icon {
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
   fill: var(--accent-color);
 }
 
